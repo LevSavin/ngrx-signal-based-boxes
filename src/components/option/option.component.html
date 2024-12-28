@@ -1,0 +1,9 @@
+<div
+  class="option"
+  [class]="{
+    'option--active': store.activeBox()?.option?.id === option.id
+  }"
+  (click)="store.selectOption(option)"
+>
+  <div class="option__label">{{ option.label }}</div>
+</div>
