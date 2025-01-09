@@ -1,19 +1,19 @@
 import {TestBed, ComponentFixture} from "@angular/core/testing";
-import {OptionComponent} from "./option.component";
+import {BoxItemComponent} from "./box-item.component";
 import {SelectionStore} from "../../store/selection.store";
 
 describe('OptionComponent', () => {
-  let component: OptionComponent;
-  let fixture: ComponentFixture<OptionComponent>;
+  let component: BoxItemComponent;
+  let fixture: ComponentFixture<BoxItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OptionComponent],
+      imports: [BoxItemComponent],
     }).compileComponents();
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(OptionComponent);
+    const fixture = TestBed.createComponent(BoxItemComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });

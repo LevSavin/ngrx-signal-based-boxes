@@ -72,13 +72,13 @@ export const SelectionStore = signalStore(
   }))
 );
 
-function getInitialBoxes(): IBox[] {
+export function getInitialBoxes(): IBox[] {
   const dataString = window.localStorage.getItem(localStorageKey);
   const boxes = dataString ? JSON.parse(dataString)?.boxes : getEmptyBoxes();
   return boxes;
 }
 
-function getEmptyBoxes(): IBox[] {
+export function getEmptyBoxes(): IBox[] {
   return new Array(10).fill(null).map((_, index) => ({
     id: index,
     option: null,
