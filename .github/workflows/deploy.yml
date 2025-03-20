@@ -32,6 +32,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ github.ref_name == 'main' && 'ngrx-signal-based-boxes' || 'ngrx-signal-boxes-dev' }}
+          projectName: ngrx-signal-based-boxes
           directory: dist/cloudflare
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }} 
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref_name }} 
