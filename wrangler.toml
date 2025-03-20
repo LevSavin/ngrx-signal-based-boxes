@@ -6,4 +6,9 @@ command = "npm run build"
 cwd = "."
 
 [site]
-bucket = "./dist/cloudflare" 
+bucket = "./dist/cloudflare"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200 
