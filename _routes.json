@@ -4,5 +4,11 @@
   "exclude": [
     "/build/*",
     "/static/*"
+  ],
+  "routes": [
+    {
+      "src": "^/.*",
+      "dest": "/index.html"
+    }
   ]
 } 
