@@ -1,0 +1,9 @@
+name = "ngrx-signal-boxes"
+compatibility_date = "2024-03-20"
+
+[build]
+command = "npm run build"
+cwd = "."
+
+[site]
+bucket = "./dist/cloudflare" 
