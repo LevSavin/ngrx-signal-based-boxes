@@ -28,7 +28,7 @@ jobs:
         run: npm run build -- --configuration=${{ github.ref_name == 'master' && 'production' || 'development' }}
 
       - name: Deploy to Cloudflare Pages
-        if: github.ref_name == 'master' || github.ref_name == 'development'
+        if: startsWith(github.ref, 'refs/heads/master') || startsWith(github.ref, 'refs/heads/development') # Проверка на ветки master и development
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
